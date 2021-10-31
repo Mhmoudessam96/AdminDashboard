@@ -1,0 +1,15 @@
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\MyDashboard.BL.deps.json
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\MyDashboard.BL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\ref\MyDashboard.BL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\MyDashboard.BL.pdb
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\MyDashboard.DAL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\bin\Debug\net5.0\MyDashboard.DAL.pdb
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.csprojAssemblyReference.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.AssemblyInfoInputs.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.AssemblyInfo.cs
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.csproj.CopyComplete
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\ref\MyDashboard.BL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.BL\obj\Debug\net5.0\MyDashboard.BL.pdb

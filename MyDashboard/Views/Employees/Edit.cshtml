@@ -1,0 +1,63 @@
+﻿@model MyDashboard.BL.Models.EmployeeVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Edit"];
+
+}
+
+
+
+
+<br />
+
+<a asp-action="Index" asp-controller="Employees" class="btn btn-primary">@SharedLocalizer["BTED"]</a>
+
+<br />
+<br />
+<form asp-action="Edit" asp-controller="Employees" class="form-group">
+
+    <br />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <br />
+
+    <label asp-for="Name">@SharedLocalizer["EN"]</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Salary">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="Salary" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+
+    <br />
+    <label asp-for="HireDate">@SharedLocalizer["EHD"]</label>
+    <input type="text" class="form-control" asp-for="HireDate" />
+    <span asp-validation-for="HireDate" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Email">@SharedLocalizer["EE"]</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <br />
+    <label asp-for="IsActive">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="IsActive" />
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Notes">@SharedLocalizer["ENT"]</label>
+    <input type="text" class="form-control" asp-for="Notes" />
+    <span asp-validation-for="Notes" class="text-danger"></span>
+
+    <br />
+    <center>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancle" class="btn btn-danger" />
+    </center>
+
+</form>
+
+@section ClientValidation{
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

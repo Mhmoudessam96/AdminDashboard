@@ -1,0 +1,50 @@
+﻿@model MyDashboard.BL.Models.EmployeeVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Details"];
+
+}
+
+
+<br />
+
+<a asp-action="Index" asp-controller="Employees" class="btn btn-primary">@SharedLocalizer["BTED"]</a>
+<a asp-action="Edit" asp-controller="Employees" asp-route-id="@Model.Id" class="btn btn-success">@SharedLocalizer["Edit"]</a>
+<br />
+<br />
+<form class="form-group">
+
+
+    <label asp-for="@SharedLocalizer["Id"]">Id</label>
+    <input class="form-control" type="text" asp-for="Id" disabled />
+
+    <label asp-for="Name">@SharedLocalizer["EN"]</label>
+    <input type="text" class="form-control" asp-for="Name" disabled />
+    <br />
+
+    <label asp-for="Salary">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="Salary" disabled />
+
+    <br />
+    <label asp-for="HireDate">@SharedLocalizer["EHD"]</label>
+    <input type="text" class="form-control" asp-for="HireDate" disabled />
+    <br />
+
+    <label asp-for="IsActive">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="IsActive" disabled />
+
+    <br />
+    <label asp-for="Email">@SharedLocalizer["EE"]</label>
+    <input type="text" class="form-control" asp-for="Email" disabled />
+    <br />
+
+    <label asp-for="Notes">@SharedLocalizer["ENT"]</label>
+    <input type="text" class="form-control" asp-for="Notes" disabled />
+
+    <br />
+
+
+
+</form>
+
+

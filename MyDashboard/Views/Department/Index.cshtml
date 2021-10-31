@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MyDashboard.BL.Models.DepartmentVM>
+@{
+    ViewBag.Title = SharedLocalizer["Department"];
+
+}
+
+<div class="block-header">
+    <center><h1>@SharedLocalizer["DD"]</h1> </center>
+
+
+    <br />
+
+    <a asp-action="Create" asp-controller="Department" class="btn btn-primary">@SharedLocalizer["CND"]</a>
+
+    <br /> <br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">@SharedLocalizer["Id"]</th>
+                <th scope="col">@SharedLocalizer["DN"]</th>
+                <th scope="col">@SharedLocalizer["DC"]</th>
+                <th scope="col">@SharedLocalizer["Update"]</th>
+                <th scope="col">@SharedLocalizer["Delete"]</th>
+                <th scope="col">@SharedLocalizer["Details"]</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.DepartmentName</td>
+                <td>@item.DepartmentCode</td>
+                <td><a asp-action="Edit" asp-controller="Department" asp-route-id="@item.Id" class="btn btn-success">@SharedLocalizer["Update"]</a></td>
+                <td><a asp-action="Delete" asp-controller="Department" asp-route-id="@item.Id" class="btn btn-danger">@SharedLocalizer["Delete"]</a></td>
+                <td><a asp-action="Details" asp-controller="Department" asp-route-id="@item.Id" class="btn btn-info">@SharedLocalizer["Details"]</a></td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+</div>

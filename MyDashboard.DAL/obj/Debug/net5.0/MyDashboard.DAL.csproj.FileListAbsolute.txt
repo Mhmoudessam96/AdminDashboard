@@ -1,0 +1,15 @@
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\MyDashboard.DAL.deps.json
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\MyDashboard.DAL.runtimeconfig.json
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\MyDashboard.DAL.runtimeconfig.dev.json
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\MyDashboard.DAL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\ref\MyDashboard.DAL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\bin\Debug\net5.0\MyDashboard.DAL.pdb
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.csprojAssemblyReference.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.AssemblyInfoInputs.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.AssemblyInfo.cs
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\ref\MyDashboard.DAL.dll
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.pdb
+C:\Users\Mahmoud Essam\source\repos\MyDashboard.DAL\obj\Debug\net5.0\MyDashboard.DAL.genruntimeconfig.cache

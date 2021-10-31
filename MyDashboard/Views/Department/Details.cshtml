@@ -1,0 +1,35 @@
+﻿@model MyDashboard.BL.Models.DepartmentVM
+
+@{
+    ViewData["Title"] = SharedLocalizer["Details"];
+
+}
+
+
+<br />
+
+<a asp-action="Index" asp-controller="Department" class="btn btn-primary">@SharedLocalizer["BTDD"]</a>
+<a asp-action="Edit" asp-controller="Department" asp-route-id="@Model.Id" class="btn btn-success">@SharedLocalizer["Edit"]</a>
+<br />
+<br />
+<form  class="form-group">
+
+
+    <label asp-for="Id">@SharedLocalizer["Id"]</label> <br />
+    <input type="text" asp-for="Id"  disabled/>
+    <br />
+
+    <label asp-for="DepartmentName">@SharedLocalizer["DN"]</label>
+    <input type="text" class="form-control" asp-for="DepartmentName" disabled />
+    <br />
+
+    <label asp-for="DepartmentCode">@SharedLocalizer["DC"]</label>
+    <input type="text" class="form-control" asp-for="DepartmentCode" disabled />
+
+    <br />
+
+   
+
+</form>
+
+

@@ -1,0 +1,171 @@
+﻿@model MyDashboard.BL.Models.EmployeeVM
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+
+
+<br />
+
+<a asp-action="Index" asp-controller="Employees" class="btn btn-primary">Back To Employees Data</a>
+
+<br />
+<br />
+<form enctype="multipart/form-data" asp-action="Create" asp-controller="Employees" class="form-group">
+
+    <br />
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <br />
+
+    <label asp-for="Name">@SharedLocalizer["EN"]</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Salary">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="Salary" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+
+    <br />
+    <label asp-for="HireDate">@SharedLocalizer["EHD"]</label>
+    <input type="text" class="form-control" asp-for="HireDate" />
+    <span asp-validation-for="HireDate" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Email">@SharedLocalizer["EE"]</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <br />
+    <label asp-for="IsActive">@SharedLocalizer["ES"]</label>
+    <input type="text" class="form-control" asp-for="IsActive" />
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+    <br />
+
+    <label asp-for="Notes">@SharedLocalizer["ENT"]</label>
+    <input type="text" class="form-control" asp-for="Notes" />
+    <span asp-validation-for="Notes" class="text-danger"></span>
+
+    <br />
+    <label asp-for="DepartmentId">@SharedLocalizer["Department"]</label>
+    <select asp-for="DepartmentId" asp-items="(SelectList) ViewBag.DepartmentList">
+        <option>Choose Department</option>
+    </select>
+    <span asp-validation-for="DepartmentId" class="text-daner"></span>
+    <br />
+
+
+    <label>@SharedLocalizer["Country"]</label>
+    <select id="CountryId" asp-items="(SelectList)ViewBag.CountryList">
+        <option>Choose Country</option>
+    </select>
+
+    <br />
+
+    <label>@SharedLocalizer["City"]</label>
+    <select id="CityId">
+        <option>Choose City</option>
+    </select>
+
+    <br />
+
+    <label asp-for="DistrictId">@SharedLocalizer["District"]</label>
+    <select asp-for="DistrictId">
+        <option>Choose District</option>
+    </select>
+    <br>
+    <label asp-for="PhotoURL">@SharedLocalizer["EP"]</label>
+    <input type="file" class="form-control" asp-for="PhotoURL" />
+    <span asp-validation-for="PhotoURL" class="text-danger"></span>
+    <br />
+    <label asp-for="CVURL">@SharedLocalizer["ECV"]</label>
+    <input type="file" class="form-control" asp-for="CVURL" />
+    <span asp-validation-for="CVURL" class="text-danger"></span>
+
+    <br />
+    <br />
+    <center>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <input type="reset" value="Cancle" class="btn btn-danger" />
+    </center>
+
+</form>
+
+@section ClientValidation{
+    <script src="~/plugins/jquery-validation/jquery.validate.js"></script>
+    <script src="~/plugins/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <script>
+
+        $(function () {
+
+
+            $("#CountryId").change(function () {
+
+                var CountryID = $("#CountryId option:selected").val();
+
+                $("#CityId").empty();
+                $("#CityId").append("<option>Choose City</option>");
+
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Employees/GetAllCiteis",
+                    data: { CntryId: CountryID },
+                    success: function (res) {
+
+                        $.each(res, function (i, e) {
+
+
+                            $("#CityId").append("<option value='" + e.Id + "'>" + e.CityName + "</option>");
+
+
+                        });
+                    }
+
+
+                });
+
+            });
+
+            $("#CityId").change(function () {
+
+                var CityID = $("#CityId option:selected").val();
+
+                $("#DistrictId").empty();
+                $("#DistrictId").append("<option>Choose City</option>");
+
+
+                $.ajax({
+
+                    type: "POST",
+                    url: "/Employees/GetAllDistricts",
+                    data: { CtyId: CityID },
+                    success: function (res) {
+
+
+                        $.each(res, function (i, e) {
+
+
+                            $("#DistrictId").append("<option value='" + e.Id + "'>" + e.DistrictName + "</option>");
+
+                        });
+                    }
+
+
+                });
+
+            });
+
+
+        });
+
+
+    </script>
+
+}
+

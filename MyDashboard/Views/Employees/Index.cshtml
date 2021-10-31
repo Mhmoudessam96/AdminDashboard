@@ -1,0 +1,144 @@
+﻿@model IEnumerable<MyDashboard.BL.Models.EmployeeVM>
+@{
+    ViewBag.Title = SharedLocalizer["Employees"];
+
+}
+
+
+<div class="block-header">
+    <center><h1>@SharedLocalizer["ED"]</h1> </center>
+
+    <br />
+
+    <a asp-action="Create" asp-controller="Employees" class="btn btn-primary">@SharedLocalizer["CNE"]</a>
+
+    <br /> <br />
+
+
+    <div class="container-fluid">
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="card">
+                    <div class="header">
+                        <h2>@SharedLocalizer["WTE"]</h2>
+                        <ul class="header-dropdown m-r--5">
+                            <li class="dropdown">
+                                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <i class="material-icons">more_vert</i>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li><a href="javascript:void(0);">Action</a></li>
+                                    <li><a href="javascript:void(0);">Another action</a></li>
+                                    <li><a href="javascript:void(0);">Something else here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">@SharedLocalizer["Id"]</th>
+                                        <th scope="col">@SharedLocalizer["Name"]</th>
+                                        <th scope="col">@SharedLocalizer["HD"]</th>
+                                        <th scope="col">@SharedLocalizer["Email"] </th>
+                                        <th scope="col">@SharedLocalizer["Department"] </th>
+                                        <th scope="col">@SharedLocalizer["Photo"]</th>
+                                        <th scope="col">@SharedLocalizer["CV"]</th>
+                                        <th scope="col">@SharedLocalizer["Update"]</th>
+                                        <th scope="col">@SharedLocalizer["Delete"]</th>
+                                        <th scope="col">@SharedLocalizer["Details"]</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                    <tr>
+                                        <td>@item.Id</td>
+                                        <td>@item.Name</td>
+                                        <td>@item.HireDate.ToShortDateString()</td>
+                                        <td>@item.Email</td>
+                                        <td>@item.Department.DepartmentName</td>
+                                        <td> <img src="~/Files/Photos/@item.Photo"  height="50" width="50"/> </td>
+                                        <td><a href="~/Files/Docx/@item.CV"> @SharedLocalizer["DCV"]</a></td>
+                                        <td>@item.CV</td>
+
+                                        <td><a asp-action="Edit" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-success">@SharedLocalizer["Update"]</a></td>
+                                        <td><a asp-action="Delete" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-danger">@SharedLocalizer["Delete"]</a></td>
+                                        <td><a asp-action="Details" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-info">@SharedLocalizer["Details"]</a></td>
+
+                                    </tr>
+                                    }
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    @*<table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Hire Date</th>
+                <th scope="col">Email </th>
+                <th scope="col">Update</th>
+                <th scope="col">Remove</th>
+                <th scope="col">Details</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.HireDate.ToShortDateString()</td>
+                    <td>@item.Email</td>
+
+
+                    <td><a asp-action="Edit" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-success">Update</a></td>
+                    <td><a asp-action="Delete" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-danger">Delete</a></td>
+                    <td><a asp-action="Details" asp-controller="Employees" asp-route-id="@item.Id" class="btn btn-info">Details</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
+
+
+
+</div>
+
+@section GridView
+{
+
+    <script>
+        $(function () {
+            $('.js-basic-example').DataTable({
+                responsive: true,
+                paging: true,
+                pageLength: 5,
+                bSort: true,
+                bFilter: true,
+                //bLengthChange: false,
+                //bInfo: false,
+                lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
+
+            });
+        });
+
+
+    </script>
+}
